@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Brush Script MT', cursive;
+  margin: 0;
+  text-align: center;
+  color: #8b8b8b;
+  line-height: 1.2;
+}
+
+#image-prompt-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#result {
+  width: 100%;
+  min-height: 400px; /* Minimum height before image loads */
+  background-color: rgb(44, 43, 43);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c8c8c8;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+#result img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* Ensures image maintains aspect ratio */
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #8b8b8b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #646df1;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
